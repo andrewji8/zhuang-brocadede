@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f1e8;
+  --foreground: #1d2440;
+}
+
+/* ZHUANG BROCADE 壮锦 — 原创设计令牌（壮族织锦色：靛蓝/朱红/藤黄，蜡染米白底） */
+@theme {
+  --color-primary: #1f2d5c;   /* 靛蓝（壮锦主色·蓝染） */
+  --color-accent: #c1442e;    /* 朱红（壮锦点缀色） */
+  --color-gold: #c8963c;      /* 藤黄（织金纹样） */
+  --color-bg: #f5f1e8;        /* 蜡染米白 */
+  --color-surface: #fffdf6;   /* 暖白 */
+  --color-ink: #1d2440;       /* 深靛灰 */
+  --color-mute: #6d6a62;      /* 暖灰 */
+  --color-line: #e4ddcc;      /* 米线 */
+
+  --radius-card: 20px;
+  --radius-img: 12px;
+  --radius-pill: 999px;
+
+  --spacing-section: 96px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-display: var(--font-dm-serif-display), "Noto Serif SC", "PingFang SC", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0;
+}
+
+/* 区块间距工具类 */
+.section {
+  padding-block: var(--spacing-section);
+}
